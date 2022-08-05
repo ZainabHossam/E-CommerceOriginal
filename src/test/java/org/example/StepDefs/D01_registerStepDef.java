@@ -5,8 +5,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.messages.types.Hook;
 import org.checkerframework.checker.units.qual.C;
 import org.example.Pages.P01_Register;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 
 public class D01_registerStepDef {
@@ -44,9 +46,13 @@ P01_Register Reg= new P01_Register();
     public void ConfirmSuccessReg(){
         String  ExpectedResult ="Your registration completed";
         String ActualResult= String.valueOf(Reg.SucessMsg().getText());
-//        System.out.println("Expected Result: "+ExpectedResult);
-//        System.out.println("Actual Result: "+ActualResult);
+        String SuccessColor= Hooks.driver.findElement(By.className("result")).getCssValue("color");
+    //    System.out.println("Color: "+SuccessColor);
+    //        System.out.println("Expected Result: "+ExpectedResult);
+    //        System.out.println("Actual Result: "+ActualResult);
         Assert.assertEquals(ExpectedResult,ActualResult);
+     Assert.assertEquals(SuccessColor, "rgba(76, 177, 124, 1)");
+     //       System.out.println("SuccessColor Same");
         System.out.println("Hey, Assertion Done Successfully");
     }
 
