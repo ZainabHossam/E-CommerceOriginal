@@ -13,6 +13,7 @@ import org.testng.asserts.SoftAssert;
 
 public class D01_registerStepDef {
 P01_Register Reg= new P01_Register();
+SoftAssert softAssert=new SoftAssert();
     @Given("user go to register page")
     public void goRegisterPage(){
         Reg.registerLink().click();
@@ -50,13 +51,17 @@ P01_Register Reg= new P01_Register();
     //    System.out.println("Color: "+SuccessColor);
     //        System.out.println("Expected Result: "+ExpectedResult);
     //        System.out.println("Actual Result: "+ActualResult);
-        Assert.assertEquals(ExpectedResult,ActualResult);
-     Assert.assertEquals(SuccessColor, "rgba(76, 177, 124, 1)");
+        softAssert.assertEquals(ExpectedResult,ActualResult);
+        softAssert.assertEquals(SuccessColor, "rgba(76, 177, 124, 1)");
      //       System.out.println("SuccessColor Same");
         System.out.println("Hey, Assertion Done Successfully");
+        softAssert.assertAll();
     }
 
-
+    @And("Logout to Login")
+    public void logout(){
+        Reg.logout().click();
+}
 
 
 }

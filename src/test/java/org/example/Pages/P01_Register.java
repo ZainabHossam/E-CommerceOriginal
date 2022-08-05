@@ -50,4 +50,8 @@ public void AddDateOfBirth(){
         return Message;
 
     }
+    public WebElement logout(){
+        WebElement logoutBtn= Hooks.driver.findElement(By.className("ico-logout"));
+        return logoutBtn;
+    }
 }

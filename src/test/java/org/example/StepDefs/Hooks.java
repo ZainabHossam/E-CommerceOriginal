@@ -1,17 +1,17 @@
 package org.example.StepDefs;
-
 import io.cucumber.java.After;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.Before;
+import io.cucumber.java.BeforeAll;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.util.concurrent.TimeUnit;
 
 
 public class Hooks {
     public static WebDriver driver=null;
-    @Before
+    @BeforeAll
     public static void OpenBrowser(){
         // 1-define Bridge using WebDriverManager instead of System.setProperty()
         WebDriverManager.chromedriver().setup();
@@ -30,9 +30,9 @@ public class Hooks {
     }
 
 
-    @After
-    public static void quitBrowser() throws InterruptedException {
-        Thread.sleep(2000);
-        driver.quit();
-    }
+//    @AfterAll
+//    public static void quitBrowser() throws InterruptedException {
+//        Thread.sleep(2000);
+//        driver.quit();
+//    }
 }
