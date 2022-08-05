@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="9.175">
-    <testcase classname="F01_Register | users could register with new accounts" name="guest user could navigate to register page" time="9.07">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="8.19">
+    <testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data" time="8.039">
         <system-out><![CDATA[Given user go to register page..............................................passed
+And User select Gender type.................................................passed
+And User enter "Zainab" and "Hossam"........................................passed
+And User enter date of Birth................................................passed
+And User enter email "Zainabhossam3@gmail.com"..............................passed
+And User Enter "Password" and "Password"....................................passed
+Then Press Register.........................................................passed
+And Success Message displayed...............................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="F01_Register | users could register with new accounts" name="User could register with valid data" time="0.001">
+    <testcase classname="F01_Register | users could register with new accounts" name="User register with valid data" time="0">
         <failure message="The scenario has no steps" type="java.lang.Exception"/>
     </testcase>
 </testsuite>
