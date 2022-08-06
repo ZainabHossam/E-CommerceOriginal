@@ -6,8 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 public class P03_Home {
-public WebElement Homepage(){
- WebElement Currency= Hooks.driver.findElement(By.className("customerCurrency"));
+public WebElement ChangeCurrency(){
+ WebElement Currency= Hooks.driver.findElement(By.name("customerCurrency"));
  return Currency;
 }
+
 }

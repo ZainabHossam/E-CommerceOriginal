@@ -35,10 +35,12 @@ public class D02_LoginStepDef {
     @And("User not Login to system")
     public void InvalidLogin(){
 //
-        String ExpectedResult = "Login was unsuccessful. Please correct the errors and try again.\n" +
+        String ExpectedResult ="Login was unsuccessful. Please correct the errors and try again.\n" +
                 "No customer account found";
-        String ActualResult = Hooks.driver.findElement(By.className("message-error validation-summary-errors")).getText();
-        softAssert.assertEquals(ActualResult,ExpectedResult);
+        //button[@class=\"button-1 login-button\"]"
+        String ActualResult = Hooks.driver.findElement(By.xpath("//div[@class=\"message-error validation-summary-errors\"]")).getText();
+       // System.out.println(ActualResult);
+       softAssert.assertTrue(ActualResult.equals(ExpectedResult));
         System.out.println("Invalid Login");
         softAssert.assertAll();
     }

@@ -30,9 +30,9 @@ public class Hooks {
     }
 
 
-//    @AfterAll
-//    public static void quitBrowser() throws InterruptedException {
-//        Thread.sleep(2000);
-//        driver.quit();
-//    }
+    @AfterAll
+    public static void quitBrowser() throws InterruptedException {
+        Thread.sleep(2000);
+        driver.quit();
+    }
 }

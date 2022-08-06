@@ -6,7 +6,7 @@ Feature: F01_Register | users could register with new accounts
     And User select Gender type
     And User enter "Zainab" and "Hossam"
     And User enter date of Birth
-    And User enter email "yacev64@galotv.com"
+    And User enter email "yacevid3@galotv.com"
     And User Enter "Zainab94" and "Zainab94"
 
     Then Press Register
