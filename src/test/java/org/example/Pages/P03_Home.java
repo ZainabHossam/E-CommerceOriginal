@@ -18,4 +18,8 @@ public int ResultItemsCount(){
 
  return ResultCounts;
 }
+public WebElement GetSelectedCat(){
+ WebElement MainCat= Hooks.driver.findElement(By.xpath("//ul[@class=\"top-menu notmobile\"]"));
+ return MainCat;
+}
 }
