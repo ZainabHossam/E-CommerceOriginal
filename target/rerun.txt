@@ -1,0 +1,3 @@
+file:src/main/resources/features/F07_FollowUs.feature:3:7
+file:src/main/resources/features/F05_HoverCategory.feature:3
+file:src/main/resources/features/F06_HomeSlider.feature:3:7

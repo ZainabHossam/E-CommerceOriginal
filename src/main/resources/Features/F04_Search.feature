@@ -1,4 +1,4 @@
-@smoke
+
   Feature: User Should be able to Search
     Scenario Outline: User search on items using Product name
       Given Search tab

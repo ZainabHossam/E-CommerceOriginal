@@ -1,34 +1,150 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="4" time="13.723">
-    <testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data" time="3.896">
+<testsuite errors="0" failures="5" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="9" time="37.074">
+    <testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data" time="4.035">
         <system-out><![CDATA[Given user go to register page..............................................passed
 And User select Gender type.................................................passed
 And User enter "Zainab" and "Hossam"........................................passed
 And User enter date of Birth................................................passed
-And User enter email "yacevid3@galotv.com"..................................passed
+And User enter email "yacevid367804@galotv.com".............................passed
 And User Enter "Zainab94" and "Zainab94"....................................passed
 Then Press Register.........................................................passed
 And Success Message displayed...............................................passed
 And Logout to Login.........................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user Login with invalid email and password" time="1.443">
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user Login with invalid email and password" time="1.73">
         <system-out><![CDATA[Given user go to login page.................................................passed
 And User enter "Zainab@gmail.com"and"Passord"...............................passed
 Then Press Login Button.....................................................passed
 And User not Login to system................................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user Login with valid email and password" time="2.02">
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user Login with valid email and password" time="2.216">
         <system-out><![CDATA[Given user go to login page.................................................passed
-And User enter "yacevid3@galotv.com"and"Zainab94"...........................passed
+And User enter "yacevid367804@galotv.com"and"Zainab94"......................passed
 Then Press Login Button.....................................................passed
 And Login success successfully..............................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="F03_ChangeCurrency | User able to change Currency" name="User Change the Currency" time="1.326">
+    <testcase classname="F03_ChangeCurrency | User able to change Currency" name="User Change the Currency" time="1.407">
         <system-out><![CDATA[Given User in the home page.................................................passed
 And User Change The Currency................................................passed
 ]]></system-out>
+    </testcase>
+    <testcase classname="User should be able to hover and select subCategory" name="User Hover on main category" time="10.587">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.page\-title&quot;}&#10;  (Session info: chrome=103.0.5060.134)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.3.0', revision: 'a4995e2c09*'&#10;System info: host: 'DESKTOP-M5ER4EA', ip: '192.168.142.245', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [09cd9edb8567900c86a9507016248982, findElement {using=class name, value=page-title}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\Zainab\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59257}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59257/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 09cd9edb8567900c86a9507016248982" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given Hovering on Main Category.............................................passed
+Then Select Subcategory.....................................................passed
+And Click on the selected subcategory.......................................failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".page\-title"}
+  (Session info: chrome=103.0.5060.134)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-M5ER4EA', ip: '192.168.142.245', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [09cd9edb8567900c86a9507016248982, findElement {using=class name, value=page-title}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\Zainab\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59257}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59257/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 09cd9edb8567900c86a9507016248982
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:387)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:379)
+	at org.example.Pages.P03_Home.PageTitle(P03_Home.java:83)
+	at org.example.StepDefs.D05_HoverCategory.SelectSubCat(D05_HoverCategory.java:39)
+	at ✽.Click on the selected subcategory(file:///D:/Personal/FWD/Java/E-Commerce/src/main/resources/features/F05_HoverCategory.feature:6)
+]]></failure>
+    </testcase>
+    <testcase classname="Sliders in homepage clickable" name="First Slider clickable navigate user to new tab" time="1.144">
+        <failure message="element click intercepted: Element &lt;a href=&quot;http://demo.nopcommerce.com/&quot; aria-label=&quot;&quot; class=&quot;nivo-imageLink&quot; style=&quot;display: none;&quot;&gt;...&lt;/a&gt; is not clickable at point (759, 474). Other element would receive the click: &lt;a href=&quot;http://demo.nopcommerce.com/&quot; aria-label=&quot;&quot; class=&quot;nivo-imageLink&quot; style=&quot;display: block;&quot;&gt;...&lt;/a&gt;&#10;  (Session info: chrome=103.0.5060.134)&#10;Build info: version: '4.3.0', revision: 'a4995e2c09*'&#10;System info: host: 'DESKTOP-M5ER4EA', ip: '192.168.142.245', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [09cd9edb8567900c86a9507016248982, clickElement {id=252ee6fc-ff29-4e21-9e99-575d2ba2a5c2}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\Zainab\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59257}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59257/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on WINDOWS (09cd9edb8567900c86a9507016248982)] -&gt; xpath: //*[@id=&quot;nivo-slider&quot;]/a[1]]&#10;Session ID: 09cd9edb8567900c86a9507016248982" type="org.openqa.selenium.ElementClickInterceptedException"><![CDATA[Given First Slider link.....................................................failed
+Then Press on First Slider..................................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a href="http://demo.nopcommerce.com/" aria-label="" class="nivo-imageLink" style="display: none;">...</a> is not clickable at point (759, 474). Other element would receive the click: <a href="http://demo.nopcommerce.com/" aria-label="" class="nivo-imageLink" style="display: block;">...</a>
+  (Session info: chrome=103.0.5060.134)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'DESKTOP-M5ER4EA', ip: '192.168.142.245', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [09cd9edb8567900c86a9507016248982, clickElement {id=252ee6fc-ff29-4e21-9e99-575d2ba2a5c2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.134, chrome: {chromedriverVersion: 103.0.5060.134 (8ec6fce403b..., userDataDir: C:\Users\Zainab\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:59257}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:59257/devtoo..., se:cdpVersion: 103.0.5060.134, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (09cd9edb8567900c86a9507016248982)] -> xpath: //*[@id="nivo-slider"]/a[1]]
+Session ID: 09cd9edb8567900c86a9507016248982
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.example.StepDefs.D06_HomeSlider.PressOnLink(D06_HomeSlider.java:28)
+	at org.example.StepDefs.D06_HomeSlider.GetLink(D06_HomeSlider.java:21)
+	at ✽.First Slider link(file:///D:/Personal/FWD/Java/E-Commerce/src/main/resources/features/F06_HomeSlider.feature:4)
+]]></failure>
+    </testcase>
+    <testcase classname="Sliders in homepage clickable" name="Second Slider clickable navigate user to new tab" time="1.915">
+        <failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given Second Slider link....................................................failed
+Then Press on Second Slider.................................................skipped
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.StepDefs.D06_HomeSlider.PressOnSecLink(D06_HomeSlider.java:46)
+	at org.example.StepDefs.D06_HomeSlider.GetSecLink(D06_HomeSlider.java:37)
+	at ✽.Second Slider link(file:///D:/Personal/FWD/Java/E-Commerce/src/main/resources/features/F06_HomeSlider.feature:8)
+]]></failure>
+    </testcase>
+    <testcase classname="Sliders in homepage clickable" name="First Slider clickable navigate user to new tab" time="0.669">
+        <failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given First Slider link.....................................................failed
+Then Press on First Slider..................................................skipped
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.StepDefs.D06_HomeSlider.PressOnLink(D06_HomeSlider.java:30)
+	at org.example.StepDefs.D06_HomeSlider.GetLink(D06_HomeSlider.java:21)
+	at ✽.First Slider link(file:///D:/Personal/FWD/Java/E-Commerce/src/main/resources/features/F07_FollowUs.feature:4)
+]]></failure>
+    </testcase>
+    <testcase classname="Sliders in homepage clickable" name="Second Slider clickable navigate user to new tab" time="7.532">
+        <failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[Given Second Slider link....................................................failed
+Then Press on Second Slider.................................................skipped
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.StepDefs.D06_HomeSlider.PressOnSecLink(D06_HomeSlider.java:46)
+	at org.example.StepDefs.D06_HomeSlider.GetSecLink(D06_HomeSlider.java:37)
+	at ✽.Second Slider link(file:///D:/Personal/FWD/Java/E-Commerce/src/main/resources/features/F07_FollowUs.feature:8)
+]]></failure>
     </testcase>
 </testsuite>
