@@ -112,4 +112,31 @@ public WebElement GetFaceBookLink(){
   return SocialLink;
  }
 
+ public WebElement GetFavItem(){
+  WebElement FavLink = Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div/div[4]/div[2]/div[3]/div/div[2]/div[3]/div[2]/button[3]"));
+  return FavLink;
+ }
+ public WebElement GetMsg(){
+  WebElement SucMSG = Hooks.driver.findElement(By.className("content"));
+
+   return SucMSG;
+ }
+
+ public WebElement CloseMsg(){
+  WebElement CloseMSGBtn = Hooks.driver.findElement(By.className("close"));
+
+  return CloseMSGBtn;
+ }
+
+ public WebElement QtCheck(){
+  WebElement Quatity = Hooks.driver.findElement(By.className("wishlist-qty"));
+  return Quatity;
+ }
+
+
+
+
+
+
+
 }

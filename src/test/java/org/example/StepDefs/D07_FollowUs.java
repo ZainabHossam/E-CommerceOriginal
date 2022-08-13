@@ -53,6 +53,7 @@ public class D07_FollowUs {
         Hooks.driver.switchTo().window(tabs.get(1));
         System.out.println("tab 1:  " +Hooks.driver.getCurrentUrl());
         Assert.assertEquals(Hooks.driver.getCurrentUrl(),Link);
+        Hooks.driver.close();
         Hooks.driver.switchTo().window(tabs.get(0));
 
         // reload
